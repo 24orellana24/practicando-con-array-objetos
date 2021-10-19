@@ -1,3 +1,4 @@
+// Creación de unica variable con todos los valores del ejercicio, utilizando objetos y arrreglos
 let estadistica = {
   radiologia: {
     hora: ['11:00', '11:30', '15:00', '15:30', '16:00'],
@@ -24,10 +25,12 @@ let estadistica = {
   }
 }
 
+// Creación de variables con los últimos valores de cada unidad médica, para mostrar posteriormente en el DOM
 let ultRadiologia = (estadistica.radiologia.paciente.length) - 1
 let ultTraumatologia = (estadistica.traumatologia.paciente.length) - 1
 let ultDental = (estadistica.dental.paciente.length) - 1
 
+// Definición de variable para crear lista de todas las atenciones médicas, para mostrar posteriormente en el DOM
 let texto = `
   <tr>
     <th>Unidad:</th>
@@ -39,6 +42,7 @@ let texto = `
   </tr>
 `
 
+// Traspaso de la información del objeto radiología a la variable texto
 for (i = 0; i < estadistica.radiologia.hora.length; i++) {
   texto += `
     <tr>
@@ -52,6 +56,7 @@ for (i = 0; i < estadistica.radiologia.hora.length; i++) {
   `
 }
 
+// Traspaso de la información del objeto traumatología a la variable texto
 for (i = 0; i < estadistica.traumatologia.hora.length; i++) {
   texto += `
     <tr>
@@ -65,6 +70,7 @@ for (i = 0; i < estadistica.traumatologia.hora.length; i++) {
   `
 }
 
+// Traspaso de la información del objeto dental a la variable texto
 for (i = 0; i < estadistica.dental.hora.length; i++) {
   texto += `
     <tr>
@@ -78,6 +84,7 @@ for (i = 0; i < estadistica.dental.hora.length; i++) {
   `
 }
 
+// Se imprime en el DOM toda la información recopilada en las variables, conforme lo solicita el ejercicio.
 document.write(`
   <hr>
   <h3>Radiología:</h3>
