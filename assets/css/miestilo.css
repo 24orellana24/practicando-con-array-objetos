@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table tr th {
+  border: 1px solid red;
+  border-collapse: collapse;
+  font-size: small;
+  font-style: italic;
+  color: blue;
+}
+
+th {
+  width: 15%;
+}
